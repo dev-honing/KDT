@@ -15,6 +15,7 @@ http.createServer(function (request, response) {
   // writeHead() 메서드를 사용해 응답 메시지 헤더를 작성
   // 객체 "Content-Type" : "text/html"을 객체로 넣어주기 위해 변수 선언
   // writeHeadObject 변수 선언
-  let writeHeadObject = { "Content-Type": "text/html" };
-  response.writeHead(200, writeHeadObject);
+  let writeHeadObject = { "Content-Type": "text/html" }; // 컨텐츠 타입은 html이라는 두번째 매개변수 객체 타입
+
+  response.writeHead(200, writeHeadObject); // 200(정상적으로 접속됨을 의미)
 });
