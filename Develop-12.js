@@ -10,4 +10,11 @@ http.createServer(function (request, response) {
   // 아래의 console.log() 두 개를 실행하는 것이다.
   console.log(request.method);
   console.log(request.url);
+
+  // 웹사이트에 응답으로
+  // writeHead() 메서드를 사용해 응답 메시지 헤더를 작성
+  // 객체 "Content-Type" : "text/html"을 객체로 넣어주기 위해 변수 선언
+  // writeHeadObject 변수 선언
+  let writeHeadObject = { "Content-Type": "text/html" };
+  response.writeHead(200, writeHeadObject);
 });
