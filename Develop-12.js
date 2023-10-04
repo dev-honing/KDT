@@ -12,10 +12,13 @@ http.createServer(function (request, response) {
   console.log(request.url);
 
   // 웹사이트에 응답으로
-  // writeHead() 메서드를 사용해 응답 메시지 헤더를 작성
+  // writeHead() 메서드를 사용해 응답 데이터 헤더를 작성
   // 객체 "Content-Type" : "text/html"을 객체로 넣어주기 위해 변수 선언
   // writeHeadObject 변수 선언
   let writeHeadObject = { "Content-Type": "text/html" }; // 컨텐츠 타입은 html이라는 두번째 매개변수 객체 타입
 
   response.writeHead(200, writeHeadObject); // 200(정상적으로 접속됨을 의미)
-});
+
+  // file system 모듈을 사용해 미리 정적으로 생성한 index.html 파일을 콜백함수로 읽어들임
+  // 그것을 응답 데이터로 활용한 예시
+  fs.readFile("./public/index.html");
