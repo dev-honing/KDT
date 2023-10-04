@@ -4,4 +4,10 @@ const http = require("http");
 const fs = require("fs");
 
 // 서버 만드는 대표적 메서드인 createServer() 사용
-http.createServer(function (request, response) {});
+http.createServer(function (request, response) {
+  // 콜백함수의 첫번째 매개변수인 request가 할 행동은
+  // 웹사이트에 접속(요청)하면
+  // 아래의 console.log() 두 개를 실행하는 것이다.
+  console.log(request.method);
+  console.log(request.url);
+});
