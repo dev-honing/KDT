@@ -22,7 +22,7 @@ http
 
     // file system 모듈을 사용해 미리 정적으로 생성한 index.html 파일을 콜백함수로 읽어들임
     // 그것을 응답 데이터로 활용한 예시
-    fs.readFile("./public/index.html", function (err, data) {
+    fs.readFile("./index.html", function (err, data) {
       // 조건문 작성
       if (err) {
         console.error("파일을 읽지 못했습니다."); // err이면 오류 메시지 출력
