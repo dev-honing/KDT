@@ -49,10 +49,14 @@
         // 하트 요소를 컨테이너에 추가
         const container = document.getElementById("heart-container");
         container.appendChild(heart);
-
+        // setTimeout() 메서드로 50 밀리세컨드 후에 애니메이션 수행하게 함
         setTimeout(function () {
           heart.classList.add("fadeout-animate");
-        });
+        }, 50);
+        // setTimeout() 메서드로 2050 밀리세컨드 후에 heart를 자식 요소에서 삭제함
+        setTimeout(function () {
+          container.removeChild(heart);
+        }, 2050);
       });
     </script>
   </body>
