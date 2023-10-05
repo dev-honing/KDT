@@ -43,6 +43,10 @@
 
       heartButton.addEventListener("click", function () {
         const heart = document.createElement("div");
+        heart.className = "heart";
+        // 하트 요소를 컨테이너에 추가
+        const container = document.getElementById("heart-container");
+        container.appendChild(heart);
       });
     </script>
   </body>
