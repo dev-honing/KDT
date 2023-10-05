@@ -22,6 +22,15 @@
       .fadeout-animate {
         animation: fadeout-animate 2s forwards;
       }
+      @keyframes fadeout-animate {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
     </style>
   </head>
   <body>
@@ -29,5 +38,6 @@
       <button id="heart-button">Click Me</button>
       <div id="heart-container"></div>
     </div>
+    <script></script>
   </body>
 </html>
