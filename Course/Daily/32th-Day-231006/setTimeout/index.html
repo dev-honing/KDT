@@ -15,25 +15,6 @@
         height: 100vh;
         background-color: bisque;
       }
-      /* sosa와 애니메이션 이름을 클래스 지정 */
-      .sosa {
-        width: 100px;
-        height: 100px;
-        background-color: black;
-        position: absolute;
-        top: 100px;
-      }
-      .moveDown-animate {
-        animation: moveDown-animate 2s forwards;
-      }
-      @keyframes moveDown-animate {
-        from {
-          opacity: 1;
-        }
-        to {
-          transform: translateY(-100px);
-        }
-      }
     </style>
   </head>
   <body>
@@ -43,12 +24,17 @@
     <script>
       // root 변수 선언
       const root = document.getElementById("root");
-      // sosa 변수 선언
-      const sosa = document.getElementById("sosa");
+      sosa.style.width = "100px";
+      sosa.style.height = "100px";
+      sosa.style.backgroundColor = "black";
+      sosa.style.position = "absolute";
+      sosa.style.top = "100px";
 
       // 초기값인 100을 initial로 변수 선언
       let initial = 100;
       setInterval(function () {
+        // sosa 변수 선언
+        const sosa = document.getElementById("sosa");
         sosa.style.top = initial + "px";
         sosa.style.right = initial + "px";
         initial++;
