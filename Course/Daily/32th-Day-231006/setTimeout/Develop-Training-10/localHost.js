@@ -14,4 +14,4 @@ http
       }
     });
   })
-  .listen(8080);
+  .listen(8080); // node localHost.js를 실행하여 clickGame.html을 불러올 수 있는지 확인
