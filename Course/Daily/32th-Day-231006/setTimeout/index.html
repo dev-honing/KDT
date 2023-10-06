@@ -24,7 +24,15 @@
         top: 100px;
       }
       .moveDown-animate {
-        animation: moveDown-animate 2s backwards;
+        animation: moveDown-animate 2s forwards;
+      }
+      @keyframes moveDown-animate {
+        from {
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-100px);
+        }
       }
     </style>
   </head>
