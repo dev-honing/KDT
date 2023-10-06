@@ -63,5 +63,11 @@
     const root = document.getElementById("root");
     // 변수 선언 container
     const container = document.getElementById("container");
+
+    // 게임화면에 구현할 로직 작성
+    // 10초 뒤에 사라질 container
+    setInterval(function () {
+      container.style.backgroundColor = "red"; // 배경색상을 빨간색으로 해서 잘 작동되는지 확인
+    }, 10000);
   </script>
 </html>
