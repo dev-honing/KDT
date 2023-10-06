@@ -29,7 +29,14 @@
       sosa.style.backgroundColor = "black";
       sosa.style.position = "absolute";
       sosa.style.top = "100px";
-      // Q. 1초마다 픽셀크기를 1씩 증가시킬 수 있나요?
+
+      // 초기값인 100을 initial로 변수 선언
+      let initial = 100;
+
+      setInterval(function () {
+        sosa.style.top = initial + "px";
+        initial++;
+      }, 1000);
     </script>
   </body>
 </html>
