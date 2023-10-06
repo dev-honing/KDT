@@ -37,10 +37,12 @@
         sosa.style.top = initial + "px";
         sosa.style.left = initial + "px";
         initial++;
+        if (sosa.style.top >= "350px") {
+          root.style.backgroundColor = "red";
+        } else {
+          root.style.backgroundColor = "bisque";
+        }
       }, 60);
-
-      // 개발자 도구로 확인하니 top의 값이 100에서부터 실시간으로 바뀌는 것을 확인했다.
-      // 눈대중으로 살펴보니 대략 350px에서 높이의 절반을 지나가는 것 같다.
     </script>
   </body>
 </html>
