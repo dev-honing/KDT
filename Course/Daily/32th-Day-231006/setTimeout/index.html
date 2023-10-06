@@ -24,30 +24,23 @@
     <script>
       // root 변수 선언
       const root = document.getElementById("root");
+      // sosa 변수 선언
+      const sosa = document.getElementById("sosa");
       sosa.style.width = "100px";
       sosa.style.height = "100px";
       sosa.style.backgroundColor = "black";
       sosa.style.position = "absolute";
-      sosa.style.top = "100px";
 
       // 초기값인 100을 initial로 변수 선언
       let initial = 100;
       setInterval(function () {
-        // sosa 변수 선언
-        const sosa = document.getElementById("sosa");
         sosa.style.top = initial + "px";
-        sosa.style.right = initial + "px";
+        sosa.style.left = initial + "px";
         initial++;
       }, 60);
 
-      // if (rootHeight - sosaHeight < "0") {
-      //   root.style.backgroundColor = "bisque";
-      // } else {
-      //   root.style.backgroundColor = "blue";
-      // }
-      // 1. sosa의 div 위치 좌표를 파악하기
-      // 2. 위치 좌표가 특정값 이상이라는 조건식 작성하기
-      // 3. 변화시킬 스타일링 구현하기
+      // 개발자 도구로 확인하니 top의 값이 100에서부터 실시간으로 바뀌는 것을 확인했다.
+      // 눈대중으로 살펴보니 대략 350px에서 높이의 절반을 지나가는 것 같다.
     </script>
   </body>
 </html>
