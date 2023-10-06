@@ -22,6 +22,9 @@
       <div id="sosa"></div>
     </div>
     <script>
+      // root 변수 선언
+      const root = document.getElementById("root");
+      // sosa 변수 선언
       const sosa = document.getElementById("sosa");
       console.log(sosa);
       sosa.style.width = "100px";
@@ -37,7 +40,17 @@
         sosa.style.right = initial + "px";
         initial++;
       }, 60);
-      // Q. sosa의 위치값이 절반 이상을 넘어가면 배경색을 변경할 수 있나요?
+      // 높이 연산을 위해 두 클래스의 높이를 변수 선언 : 실패!
+      const rootHeight = root.style.height;
+      const sosaHeight = root.style.height;
+      if (rootHeight - sosaHeight < "0") {
+        root.style.backgroundColor = "bisque";
+      } else {
+        root.style.backgroundColor = "blue";
+      }
+      // 1. sosa의 div 위치 좌표를 파악하기
+      // 2. 위치 좌표가 특정값 이상이라는 조건식 작성하기
+      // 3. 변화시킬 스타일링 구현하기
     </script>
   </body>
 </html>
