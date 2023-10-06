@@ -7,3 +7,4 @@ setTimeout(function () {
 setTimeout(function () {
   console.log("세번째");
 }, 1000);
+// 시간에 따른 순서를 지정할 수 있다는 게 포인트!
