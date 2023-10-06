@@ -1,1 +1,3 @@
-setTimeout(callback, 1000); // 밀리세컨드 단위라 1000이 1초임
+setTimeout(function () {
+  console.log("test");
+}, 1000); // 1초 후 console에 "test"가 나오는지 확인
