@@ -15,6 +15,11 @@
         height: 100vh;
         background-color: bisque;
       }
+      /* sosa와 애니메이션 이름을 클래스 지정 */
+      .sosa {
+      }
+      .fadeout-animate {
+      }
     </style>
   </head>
   <body>
@@ -40,14 +45,12 @@
         sosa.style.right = initial + "px";
         initial++;
       }, 60);
-      // 높이 연산을 위해 두 클래스의 높이를 변수 선언 : 실패!
-      const rootHeight = root.style.height;
-      const sosaHeight = root.style.height;
-      if (rootHeight - sosaHeight < "0") {
-        root.style.backgroundColor = "bisque";
-      } else {
-        root.style.backgroundColor = "blue";
-      }
+
+      // if (rootHeight - sosaHeight < "0") {
+      //   root.style.backgroundColor = "bisque";
+      // } else {
+      //   root.style.backgroundColor = "blue";
+      // }
       // 1. sosa의 div 위치 좌표를 파악하기
       // 2. 위치 좌표가 특정값 이상이라는 조건식 작성하기
       // 3. 변화시킬 스타일링 구현하기
