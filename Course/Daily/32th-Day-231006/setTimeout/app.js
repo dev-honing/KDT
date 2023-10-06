@@ -2,9 +2,9 @@ setTimeout(function () {
   console.log("첫번째");
   setTimeout(function () {
     console.log("두번째");
+    setTimeout(function () {
+      console.log("세번째");
+    }, 1000);
   }, 2000);
 }, 3000);
-setTimeout(function () {
-  console.log("세번째");
-}, 1000);
-// 한 줄만 위로 올리면 "두번째"가 5초 뒤에 실행되게 할 수 있다!
+// 가독성이 다소 떨어지지만 세번째가 6초 뒤 실행되게 할 수도 있다!
