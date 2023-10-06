@@ -39,6 +39,10 @@
     // 변수 선언 container
     const container = document.getElementById("container");
     // container 로직
+    // container의 좌푯값을 얻어 점이 생성될 영역을 설정하고 랜덤한 위치에서 생성돼야 함
+    // 1. DOM API로 좌푯값을 얻는 방법
+    // 2. window.pageOffset으로 스크롤한 양을 픽셀 단위 출력
+
     setInterval(function () {
       container.style.background = "bisque";
     }, 10000);
