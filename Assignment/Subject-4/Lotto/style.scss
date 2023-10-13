@@ -5,7 +5,16 @@
 #root{
   width: 100vw;
   height: 100vh;
-    #Header{}
-    #container{}
-    #Footer{}
+    #Header{
+      width: 100vw;
+      height: 10vh;
+    }
+    #container{
+      width: 100vw;
+      height: 80vh;
+    }
+    #Footer{
+      width: 100vw;
+      height: 10vh;
+    }
 }
