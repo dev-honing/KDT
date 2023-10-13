@@ -11,12 +11,13 @@
 }
 #root div {
   display: flex;
+  border: 1px solid #000;
 }
 #root > #Header {
   width: 100vw;
   height: 10vh;
 }
-#root > #container {
+#root > #Container {
   width: 100vw;
   height: 80vh;
 }

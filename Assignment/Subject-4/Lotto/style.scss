@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+$border-000: 1px solid #000;
+
+// 
+
 *{
   margin: 0;
   padding: 0;
@@ -20,13 +24,14 @@
 
     div {
       @include flex;
+      border: $border-000;
     }
 
   > #Header{
       width: 100vw;
       height: 10vh;
     }
-  > #container{
+  > #Container{
       width: 100vw;
       height: 80vh;
     }
