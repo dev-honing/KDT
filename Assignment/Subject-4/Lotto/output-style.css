@@ -6,6 +6,10 @@
 #root {
   width: 100vw;
   height: 100vh;
+  display: flex;
+}
+#root div {
+  display: flex;
 }
 #root #Header {
   width: 100vw;
