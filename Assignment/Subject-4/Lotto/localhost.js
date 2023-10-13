@@ -12,6 +12,7 @@ const server = http.createServer(function (request, response){
       </head>
       <body>
         <h1>초기 화면</h1>
+        <button type="button" onclick="location.href='http://localhost:8080/gamestart'">
       </body>
     </html>
     `

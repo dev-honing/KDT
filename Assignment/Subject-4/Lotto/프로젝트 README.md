@@ -13,3 +13,6 @@
 
 ### 추가기능 구상
 
+## 새로 알게 된 내용
+<button href="http://localhost:8080/gamestart">게임 시작!</button>을 통해 gamestart 페이지로 이동시키려고 했는데 버튼 태그에 onclick = "location.href = `#`"을 통해 처리해야 함을 알게 되었다.
+<button type="button" onclick="location.href='http://localhost:8080/gamestart'">
