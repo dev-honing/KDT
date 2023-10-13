@@ -22,3 +22,13 @@ b# Lotto(Mini)
   
   <code><button href="http://localhost:8080/gamestart">게임 시작!</button></code>을 통해 gamestart 페이지로 이동시키려고 했는데 버튼 태그에 onclick = "location.href = `#`"을 통해 처리해야 함을 알게 되었다.
   <button type="button" onclick="location.href='http://localhost:8080/gamestart'">
+
+
+> localhost:8080으로 진입하면 내장 파일을 읽게 하는 방법
+
+  <모르는 부분>
+  1. readFile() 메서드와 readFileSync() 메서드의 차이점과 사용법이 익숙하지 않다.
+  
+  1. fs 모듈을 import 하고
+  2. fs.readFile() 메서드를 사용해서 파일을 불러온다.
+    -> 내가 하려는 작업은 파일 내부 텍스트를 불러오는 게 아니라, localhost:8000으로 진입하면 index.html의 내용물이 바로 출력되게 하려고 한다.
