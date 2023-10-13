@@ -3,19 +3,19 @@ const http = require("http");
 const server = http.createServer(function (request, response){
   console.log(request.url);
   // index.html
-  if (request.url === "/main"){
-    const docMain = `
+  if (request.url === "/index"){
+    const docIndex = `
     <html>
       <head>
       </head>
       <body>
-        <h1>Main</h1>
+        <h1>초기 화면</h1>
       </body>
     </html>
     `
-    response.end(docMain);
+    response.end(docIndex);
   }
-  // gamePage.html
+  // gameStart.html
   if (request.url === "/gamestart"){
     const docGameStart = 
     `
@@ -23,7 +23,7 @@ const server = http.createServer(function (request, response){
       <head>
       </head>
       <body>
-        <h1>GameStart</h1>
+        <h1>게임 시작</h1>
       </body>
     </html>
     `
