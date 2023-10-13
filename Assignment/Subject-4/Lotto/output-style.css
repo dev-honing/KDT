@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+#root #Header {
+  width: 100vw;
+  height: 10vh;
+}
+#root #container {
+  width: 100vw;
+  height: 80vh;
+}
+#root #Footer {
+  width: 100vw;
+  height: 10vh;
+}
 
 /*# sourceMappingURL=output-style.css.map */
