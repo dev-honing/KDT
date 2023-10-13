@@ -2,4 +2,17 @@
 const http = require("http");
 const server = http.createServer(function (request, response){
   console.log(request.url);
+  // index.html
+  if (request.url === "/main"){
+    const docMain = `
+    <html>
+      <head>
+      </head>
+      <body>
+        <h1>Main</h1>
+      </body>
+    </html>
+    `
+    response.end(docMain);
+  }
 });
