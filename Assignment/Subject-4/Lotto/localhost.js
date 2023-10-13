@@ -30,3 +30,4 @@ const server = http.createServer(function (request, response){
     response.end(docGameStart);
   }
 });
+server.listen(8080); // 포트번호 8080 사용
