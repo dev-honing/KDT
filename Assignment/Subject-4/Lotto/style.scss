@@ -34,8 +34,14 @@ $border-000: 1px solid #000;
   > #Container{
       width: 100vw;
       height: 80vh;
+      justify-content: center;
+      align-items: center;
+
+      // scoreBoard
       > div {
-        
+        width: 95vw;
+        height: 80vh;
+        border: $border-000;
       }
     }
   > #Footer{

@@ -20,6 +20,13 @@
 #root > #Container {
   width: 100vw;
   height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+#root > #Container > div {
+  width: 95vw;
+  height: 80vh;
+  border: 1px solid #000;
 }
 #root > #Footer {
   width: 100vw;
