@@ -2,6 +2,7 @@
 const http = require("http");
 http.createServer((request, response) => {
   console.log(request.url);
-  response.writeHead(200, {'Content-Type' : 'text/html'})
+  const writeHeadObject = {'Content-Type' : 'text/html'}
+  response.writeHead(200, writeHeadObject);
 })
 .listen(8080);
