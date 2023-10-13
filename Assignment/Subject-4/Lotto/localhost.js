@@ -4,39 +4,15 @@ const http = require("http");
 // fs 모듈 import
 const fs = require("fs");
 
-const server = http.createServer(function (request, response){
+http.createServer((request, response) => {
   console.log(request.url);
-  // index.html
-  if (request.url === "/"){
-    const docIndex = `
-    <html>
-      <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      </head>
-      <body>
-        <h1>초기 화면</h1>
-        <button type="button" onclick="location.href='http://localhost:8080/gamestart'">
-      </body>
-    </html>
-    `
-    response.end(docIndex);
-  }
-  // gameStart.html
-  if (request.url === "/gamestart"){
-    const docGameStart = 
-    `
-    <html>
-      <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      </head>
-      <body>
-        <h1>게임 시작</h1>
-      </body>
-    </html>
-    `
-    response.end(docGameStart);
-  }
-});
-server.listen(8080); // 포트번호 8080 사용
+  const writeHeadObject = {'Content-Type' : 'text/html'}
+  response.writeHead(200, writeHeadObject);
+  fs.readFile("./index.html", (err, data) => {
+    if (err) {
+      console.error("파일을 읽지 못했어요.")
+    }
+    else { response.end(data)};
+  })
+})
+.listen(8080);
