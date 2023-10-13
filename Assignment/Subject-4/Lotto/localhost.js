@@ -7,6 +7,8 @@ const server = http.createServer(function (request, response){
     const docIndex = `
     <html>
       <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <body>
         <h1>초기 화면</h1>
@@ -21,6 +23,8 @@ const server = http.createServer(function (request, response){
     `
     <html>
       <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <body>
         <h1>게임 시작</h1>
