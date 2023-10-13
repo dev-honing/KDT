@@ -1,5 +1,9 @@
 // http 모듈 import
 const http = require("http");
+
+// fs 모듈 import
+const fs = require("fs");
+
 const server = http.createServer(function (request, response){
   console.log(request.url);
   // index.html
