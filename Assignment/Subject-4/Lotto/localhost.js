@@ -3,7 +3,7 @@ const http = require("http");
 const server = http.createServer(function (request, response){
   console.log(request.url);
   // index.html
-  if (request.url === "/index"){
+  if (request.url === "/"){
     const docIndex = `
     <html>
       <head>
