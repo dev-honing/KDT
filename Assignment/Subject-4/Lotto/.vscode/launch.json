@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "프로그램 시작",
+      "name": "Lotto",
       "skipFiles": [
         "<node_internals>/**"
       ],
