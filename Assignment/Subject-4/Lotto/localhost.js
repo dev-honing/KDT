@@ -15,4 +15,18 @@ const server = http.createServer(function (request, response){
     `
     response.end(docMain);
   }
+  // gamePage.html
+  if (request.url === "/gamestart"){
+    const docGameStart = 
+    `
+    <html>
+      <head>
+      </head>
+      <body>
+        <h1>GameStart</h1>
+      </body>
+    </html>
+    `
+    response.end(docGameStart);
+  }
 });
