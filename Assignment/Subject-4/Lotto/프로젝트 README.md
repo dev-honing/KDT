@@ -22,3 +22,33 @@ b# Lotto(Mini)
   
   <code><button href="http://localhost:8080/gamestart">게임 시작!</button></code>을 통해 gamestart 페이지로 이동시키려고 했는데 버튼 태그에 onclick = "location.href = `#`"을 통해 처리해야 함을 알게 되었다.
   <button type="button" onclick="location.href='http://localhost:8080/gamestart'">
+
+---
+> http://localhost:8080에 진입하면 index.html이 바로 출력되게 하는 방법을 몰랐다.
+
+  1) readFile() 메서드에 대해서도 찾아보았지만 터미널에 콘솔형태로 텍스트만 출력하는 걸로 오해했다.
+  2) response.writeHead() 메서드의 사용 연습이 부족했다.
+  3) index.html이라는 파일의 경로에 접근하는 연습이 부족했다.
+
+  -> 해결 
+  
+<code>
+// http 모듈 import
+const http = require("http");
+
+// fs 모듈 import
+const fs = require("fs");
+
+http.createServer((request, response) => {
+  console.log(request.url);
+  const writeHeadObject = {'Content-Type' : 'text/html'}
+  response.writeHead(200, writeHeadObject);
+  fs.readFile("./index.html", (err, data) => {
+    if (err) {
+      console.error("파일을 읽지 못했어요.")
+    }
+    else { response.end(data)};
+  })
+})
+.listen(8080);
+</code>
