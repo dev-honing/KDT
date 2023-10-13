@@ -1,6 +1,12 @@
 @mixin flex {
   display: flex;
 }
+@mixin row {
+  flex-direction: row;
+}
+@mixin column {
+  flex-direction: column;
+}
 
 *{
   margin: 0;
@@ -10,18 +16,21 @@
   width: 100vw;
   height: 100vh;
   @include flex;
+  @include column;
+
     div {
       @include flex;
     }
-    #Header{
+
+  > #Header{
       width: 100vw;
       height: 10vh;
     }
-    #container{
+  > #container{
       width: 100vw;
       height: 80vh;
     }
-    #Footer{
+  > #Footer{
       width: 100vw;
       height: 10vh;
     }

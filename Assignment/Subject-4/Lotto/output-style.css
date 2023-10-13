@@ -7,19 +7,20 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 #root div {
   display: flex;
 }
-#root #Header {
+#root > #Header {
   width: 100vw;
   height: 10vh;
 }
-#root #container {
+#root > #container {
   width: 100vw;
   height: 80vh;
 }
-#root #Footer {
+#root > #Footer {
   width: 100vw;
   height: 10vh;
 }
