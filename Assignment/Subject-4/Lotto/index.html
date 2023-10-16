@@ -5,49 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>최초 접속 페이지</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-#root div {
-  display: flex;
-  border: 1px solid #000;
-}
-#root > #Header {
-  width: 100vw;
-  height: 10vh;
-}
-#root > #Container {
-  width: 100vw;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
-}
-#root > #Container > div {
-  width: 95vw;
-  height: 80vh;
-  border: 1px solid #000;
-}
-#root > #Footer {
-  width: 100vw;
-  height: 10vh;
-}
-
-/*# sourceMappingURL=output-style.css.map */
-
-  </style>
+  <link rel="stylesheet" href="./output-style.css">
 </head>
 <body>
   <div id="root">
-    <div id="Header"></div>
+    <div id="Header">
+      <!-- ScoreBoard -->
+      <div id="ScoreBoard"></div>
+      <!-- TimeLeft -->
+      <div id="TimeLeft"></div>
+      <!-- Button-STOP -->
+      <div id="Button">
+        <button id="STOP"></button>
+      </div>
+    </div>
     <div id="Container">
       <div></div>
     </div>

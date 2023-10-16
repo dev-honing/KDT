@@ -30,6 +30,26 @@ $border-000: 1px solid #000;
   > #Header{
       width: 100vw;
       height: 10vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      > #ScoreBoard {
+        width: 10vw;
+        height: 10vh;
+      }
+      > #TimeLeft{
+        width: 80vw;
+        height: 10vh;
+      }
+      > #Button{
+        width: 10vw;
+        height: 10vh;
+        > #STOP {
+          width: 10vw;
+          height: 10vh;
+
+        }
+      }
     }
   > #Container{
       width: 100vw;
@@ -37,7 +57,7 @@ $border-000: 1px solid #000;
       justify-content: center;
       align-items: center;
 
-      // scoreBoard
+      // gameScreen
       > div {
         width: 95vw;
         height: 80vh;
