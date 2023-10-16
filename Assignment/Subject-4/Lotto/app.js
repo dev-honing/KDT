@@ -31,7 +31,8 @@ const arr = [1, 2, 3];
 const newArr = []; // 빈 배열 선언
 // 3가지 숫자를 뽑음
 for(i=0; i<3; i++){
-  randomNum = Math.floor(Math.random()*15+1); // 1~16 범위의 숫자가 생성됨
+  randomNum = Math.floor(Math.random()*15+1); // 1~15 범위의 숫자가 생성됨
   newArr.push(randomNum); // arr.push() 메서드를 이용해 배열에 요소 추가
 }
 console.log(newArr); // 요소가 추가된 배열을 출력
+console.log(newArr.indexOf(16)); // arr.indexOf() 메서드는 요소가 배열에 없으면 '-1'을 출력한다.
