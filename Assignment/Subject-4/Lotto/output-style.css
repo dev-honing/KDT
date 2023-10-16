@@ -42,10 +42,20 @@
   justify-content: center;
   align-items: center;
 }
-#root > #Container > div {
+#root > #Container > #gameScreen {
   width: 95vw;
   height: 80vh;
   border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+}
+#root > #Container > #gameScreen > div {
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid #000;
+  background-color: darkgrey;
 }
 #root > #Footer {
   width: 100vw;

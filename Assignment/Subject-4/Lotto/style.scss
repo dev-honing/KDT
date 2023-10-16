@@ -44,6 +44,7 @@ $border-000: 1px solid #000;
       > #Button{
         width: 10vw;
         height: 10vh;
+        
         > #STOP {
           width: 10vw;
           height: 10vh;
@@ -56,12 +57,21 @@ $border-000: 1px solid #000;
       height: 80vh;
       justify-content: center;
       align-items: center;
-
-      // gameScreen
-      > div {
+      
+      > #gameScreen {
         width: 95vw;
         height: 80vh;
         border: $border-000;
+        justify-content: center;
+        align-items: center;
+        > div {
+          align-items: center;
+          justify-content: center;
+          width: 50vw;
+          height: 50vh;
+          border: $border-000;
+          background-color: darkgrey;
+        }
       }
     }
   > #Footer{
