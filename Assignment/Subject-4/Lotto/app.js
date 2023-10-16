@@ -9,18 +9,20 @@ const LottoRandom = Math.random(LottoArr)*10;
 const floorLottoRandom = Math.floor(LottoRandom);
 // console.log(floorLottoRandom);
 
-function Lotto(){
-  console.log(floorLottoRandom);
-  const a = console.log(floorLottoRandom);
-  a
-}
+// function Lotto(){
+//   console.log(floorLottoRandom);
+//   const a = console.log(floorLottoRandom);
+// }
 // Lotto();
 
 // 구상
 // 확인을 위한 간단한 배열 생성
 const arr = [1, 2, 3];
 // 1. 배열에 있는 요소인지 확인하기
+// 1-1. indexOf() 메서드 사용해보기
+const checking = arr.indexOf(2); 
+console.log(checking); // 배열의 인덱스가 출력됨
+
 // 2. 배열에 있는 요소를 제거하기
 // 3. 배열에 있는 요소를 제외한 새로운 배열 생성하기
 // 4. 다시 뽑기
-
