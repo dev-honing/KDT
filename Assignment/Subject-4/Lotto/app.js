@@ -14,9 +14,9 @@ function conArr(){
   }
   console.clear();
   console.count();
-  newArr.sort(function(a,b){
-    return a-b;
+  newArr.sort(function (min, max){
+    return min - max;
   })
   console.log(newArr);
 }
-setInterval(conArr, 1000);
+setInterval(conArr, 100);
