@@ -10,7 +10,7 @@ http.createServer((request, response) => {
   console.log(request.url);
   const writeHeadObject = {'Content-Type' : 'text/html'}
   response.writeHead(200, writeHeadObject);
-  fs.readFile("./index.html", "./output-style.css", (err, data) => { // css 불러오는 법을 모르겠다...
+  fs.readFile("./index.html", (err, data) => { // css 불러오는 법을 모르겠다...
     if (err) {
       console.error("파일을 읽지 못했어요.")
     }
