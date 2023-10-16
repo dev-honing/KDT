@@ -14,7 +14,7 @@ b# Lotto(Mini)
 ### 추가기능 구상
 
 ## 새로 알게 된 내용
-> 버튼 태그에 하이퍼링크를 설정하는 방법
+> 1 버튼 태그에 하이퍼링크를 설정하는 방법
 
   X : button href="http://localhost:8080/gamestart"</br>
   O : button type="button" onclick="location.href='http://localhost:8080/gamestart'"
@@ -24,7 +24,7 @@ b# Lotto(Mini)
   <button type="button" onclick="location.href='http://localhost:8080/gamestart'">
 
 ---
-> http://localhost:8080에 진입하면 index.html이 바로 출력되게 하는 방법을 몰랐다.
+> 2 http://localhost:8080에 진입하면 index.html이 바로 출력되게 하는 방법을 몰랐다.
 
   1) readFile() 메서드에 대해서도 찾아보았지만 터미널에 콘솔형태로 텍스트만 출력하는 걸로 오해했다.
   2) response.writeHead() 메서드의 사용 연습이 부족했다.
@@ -52,3 +52,15 @@ http.createServer((request, response) => {
 })
 .listen(8080);
 </code>
+
+> 3 Math.random() 메서드 사용 중, 숫자를 3번 뽑아야 하는데 3개의 숫자가 모두 동일한 문제
+
+1) console.log()로 3번 찍기: 실패
+2) for문에 넣고 i<3으로 돌리기: 실패
+
+3번째 시도: (구상)
+  1. 배열에서 숫자가 있는지 확인하기
+  2. 해당 숫자를 배열에서 빼기
+  3. 숫자를 제거한 새로운 배열을 생성하기
+  4. 그 배열에서 뽑기
+이런 순서로 진행되게 해야겠다.

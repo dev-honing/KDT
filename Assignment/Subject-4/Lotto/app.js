@@ -10,8 +10,11 @@ const floorLottoRandom = Math.floor(LottoRandom);
 // console.log(floorLottoRandom);
 
 function Lotto(){
-  for (i=0; i<3; i++){
-    console.log(floorLottoRandom);
-  }
+  console.log(floorLottoRandom);
+  const a = console.log(floorLottoRandom);
+  a
 }
-Lotto(); // for 문에 돌려도 같은 숫자 3개만 출력된다.
+Lotto();
+
+
+
