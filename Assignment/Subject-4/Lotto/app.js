@@ -20,9 +20,12 @@ const floorLottoRandom = Math.floor(LottoRandom);
 const arr = [1, 2, 3];
 // 1. 배열에 있는 요소인지 확인하기
 // 1-1. indexOf() 메서드 사용해보기
-const checking = arr.indexOf(2); 
-console.log(checking); // 배열의 인덱스가 출력됨
 
 // 2. 배열에 있는 요소를 제거하기
 // 3. 배열에 있는 요소를 제외한 새로운 배열 생성하기
 // 4. 다시 뽑기
+
+
+// 참조(https://velog.io/@eunjin/Javascript-%ED%8A%B9%EC%A0%95-%EC%88%AB%EC%9E%90-%EB%B2%94%EC%9C%84%EC%97%90%EC%84%9C-%EC%A4%91%EB%B3%B5%EC%9D%84-%EC%A0%9C%EC%99%B8%ED%95%9C-%EB%9E%9C%EB%8D%A4-%EC%88%AB%EC%9E%90-%EB%BD%91%EB%8A%94-%EB%B0%A9%EB%B2%95)
+// 새로운 관점 - 빈 배열을 변수 선언하고, for문에 넣은 뒤, arr.push() 메서드로 요소를 추가해줌
+const newArr = [];
