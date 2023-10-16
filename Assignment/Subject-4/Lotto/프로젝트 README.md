@@ -53,6 +53,7 @@ http.createServer((request, response) => {
 .listen(8080);
 </code>
 
+---
 > 3 Math.random() 메서드 사용 중, 숫자를 3번 뽑아야 하는데 3개의 숫자가 모두 동일한 문제
 
 1) console.log()로 3번 찍기: 실패
