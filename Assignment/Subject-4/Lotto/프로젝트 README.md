@@ -65,3 +65,26 @@ http.createServer((request, response) => {
   3. 숫자를 제거한 새로운 배열을 생성하기
   4. 그 배열에서 뽑기
 이런 순서로 진행되게 해야겠다.
+
+참조) https://velog.io/@eunjin/Javascript-%ED%8A%B9%EC%A0%95-%EC%88%AB%EC%9E%90-%EB%B2%94%EC%9C%84%EC%97%90%EC%84%9C-%EC%A4%91%EB%B3%B5%EC%9D%84-%EC%A0%9C%EC%99%B8%ED%95%9C-%EB%9E%9C%EB%8D%A4-%EC%88%AB%EC%9E%90-%EB%BD%91%EB%8A%94-%EB%B0%A9%EB%B2%95
+
+<code>
+function conArr(){
+  const newArr = [];
+  for (i=0; i<3; i++){
+  randomNum = Math.floor(Math.random()*15+1); // 1~15 범위 설정
+  
+  if(newArr.indexOf(randomNum) === -1 ){
+    newArr.push(randomNum);
+  } else {
+    i-- // 중복되었을 경우에 그냥 넘어가는 문제를 해결하기 위해 감소식을 작성했다고 한다.
+  }
+}
+// console.log(newArr); // 3개의 중복되지 않은 번호가 출력됨을 확인
+  console.clear();
+  console.count();
+  console.log(newArr);
+}
+setInterval(conArr, 1000);
+// 함수화 하고, setInterval() 메서드로 찍어보면서 확인하기
+</code>
