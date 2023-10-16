@@ -15,4 +15,6 @@ function conArr(){
   console.count();
   console.log(newArr);
 }
-setInterval(conArr, 1000);
+setInterval(conArr, 1000); // [14, 11, 9] 등 정렬이 안되는 문제 확인!
+
+// 보기 좋게 순차 정렬 해보자!
