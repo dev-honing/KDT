@@ -14,9 +14,11 @@ function Lotto(){
   const a = console.log(floorLottoRandom);
   a
 }
-Lotto();
+// Lotto();
 
 // 구상
+// 확인을 위한 간단한 배열 생성
+const arr = [1, 2, 3];
 // 1. 배열에 있는 요소인지 확인하기
 // 2. 배열에 있는 요소를 제거하기
 // 3. 배열에 있는 요소를 제외한 새로운 배열 생성하기
