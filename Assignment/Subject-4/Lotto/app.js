@@ -28,13 +28,21 @@ const arr = [1, 2, 3];
 
 // 참조(https://velog.io/@eunjin/Javascript-%ED%8A%B9%EC%A0%95-%EC%88%AB%EC%9E%90-%EB%B2%94%EC%9C%84%EC%97%90%EC%84%9C-%EC%A4%91%EB%B3%B5%EC%9D%84-%EC%A0%9C%EC%99%B8%ED%95%9C-%EB%9E%9C%EB%8D%A4-%EC%88%AB%EC%9E%90-%EB%BD%91%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
-// 중복을 피하기 위해 요소를 확인하고 없으면 넣어준다
+function conArr(){
 const newArr = [];
 for (i=0; i<3; i++){
-  randomNum = Math.floor(Math.random()*15+1);
-  // randomNum이 newArr에 없을 때 쓰는 조건식
+  randomNum = Math.floor(Math.random()*15+1); // 1~15 범위 설정
+  
   if(newArr.indexOf(randomNum) === -1 ){
-    newArr.push(randomNum); // randomNum을 newArr 배열에 추가
+    newArr.push(randomNum);
+  } else {
+    i-- // 중복되었을 경우에 그냥 넘어가는 문제를 해결하기 위해 감소식을 작성했다고 한다.
   }
 }
-console.log(newArr); // ? 중복된 요소가 있으면 뽑지를 않는 문제 발생!
+// console.log(newArr); // 3개의 중복되지 않은 번호가 출력됨을 확인
+  console.clear();
+  console.count();
+  console.log(newArr);
+}
+setInterval(conArr, 1000);
+// 함수화 하고, setInterval() 메서드로 찍어보면서 확인하기
