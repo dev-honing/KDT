@@ -9,11 +9,9 @@ const LottoRandom = Math.random(LottoArr)*10;
 const floorLottoRandom = Math.floor(LottoRandom);
 // console.log(floorLottoRandom);
 
-// 3개를 뽑기 위해 함수에 넣고 출력을 3번 한다.
 function Lotto(){
-  console.log(floorLottoRandom);
-  console.log(floorLottoRandom);
-  console.log(floorLottoRandom);
+  for (i=0; i<3; i++){
+    console.log(floorLottoRandom);
+  }
 }
-Lotto(); // 세 숫자가 중복되게 출력된다;; 
-// 중복되지 않은 숫자를 출력하려면 어떻게 해야할까?
+Lotto(); // for 문에 돌려도 같은 숫자 3개만 출력된다.
