@@ -5,7 +5,8 @@
 const LottoArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // 소숫점을 제거하기 위해 Math.floor() 메서드 안쪽에 로직을 넣어보자
-const LottoRandom = Math.random(LottoArr)*100;
+const LottoRandom = Math.random(LottoArr)*10;
 const floorLottoRandom = Math.floor(LottoRandom);
-console.log(floorLottoRandom); // 1~100까지의 정수가 출력되는 것으로 보인다.
+console.log(floorLottoRandom);
 
+// *10을 해주는 것으로 변경해서 1~10까지 출력되게 만들었다.
