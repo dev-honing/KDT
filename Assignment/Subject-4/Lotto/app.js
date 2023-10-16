@@ -14,8 +14,10 @@ function conArr(){
       i--;
     }
   }
-  // console.clear();
-  // console.count();
-  // console.log(Array.sort(newArr));
+  console.clear();
+  console.count();
+  // console.log(newArr);
+  const sortNewArr = newArr.sort();
+  console.log(sortNewArr);
 }
 setInterval(conArr, 1000);
