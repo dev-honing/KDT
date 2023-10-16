@@ -1,9 +1,6 @@
-// Array.sort() 메서드 활용
-const arr = [3, 2, 1];
+// entry point - app.js
 
-console.log(arr.sort());
-console.log(arr.reverse());
-// Math.floor(Math.random()) 메서드도 되는지 확인
+// 추첨기 로직을 함수화
 function conArr(){
   const newArr = [];
   for (i=0; i<3; i++){

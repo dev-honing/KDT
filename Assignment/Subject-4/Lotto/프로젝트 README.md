@@ -88,3 +88,38 @@ function conArr(){
 setInterval(conArr, 1000);
 // 함수화 하고, setInterval() 메서드로 찍어보면서 확인하기
 </code>
+
+
+> 4 배열 요소를 정렬하는 방법 - array.sort() 메서드는 문자열을 정렬하는 메서드
+  
+  <code>문자열을 정렬하는 메서드이므로 뺄셈식을 콜백함수 형태로 작성해서 해결할 수 있었다.
+  array.sort(function(a, b){
+    return a - b;
+  })
+  console.log(array);
+  </code>
+
+  위와 같은 형태로 뺄셈식을 작성해서 해결함
+
+  -> 완성된 코드
+  <code>
+    function conArr(){
+  const newArr = [];
+  for (i=0; i<3; i++){
+    const randomNum = Math.floor(Math.random()*15+1);
+    if(newArr.indexOf(randomNum) === -1){
+      newArr.push(randomNum);
+      
+    } else {
+      i--;
+    }
+  }
+  console.clear();
+  console.count();
+  newArr.sort(function(a,b){
+    return a-b;
+  })
+  console.log(newArr);
+}
+setInterval(conArr, 1000);
+  </code>
