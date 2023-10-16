@@ -7,6 +7,13 @@ const LottoArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // 소숫점을 제거하기 위해 Math.floor() 메서드 안쪽에 로직을 넣어보자
 const LottoRandom = Math.random(LottoArr)*10;
 const floorLottoRandom = Math.floor(LottoRandom);
-console.log(floorLottoRandom);
+// console.log(floorLottoRandom);
 
-// *10을 해주는 것으로 변경해서 1~10까지 출력되게 만들었다.
+// 3개를 뽑기 위해 함수에 넣고 출력을 3번 한다.
+function Lotto(){
+  console.log(floorLottoRandom);
+  console.log(floorLottoRandom);
+  console.log(floorLottoRandom);
+}
+Lotto(); // 세 숫자가 중복되게 출력된다;; 
+// 중복되지 않은 숫자를 출력하려면 어떻게 해야할까?
