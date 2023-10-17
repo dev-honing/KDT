@@ -18,13 +18,22 @@ console.log("어떤 요청이 들어오는지 확인", "url -> ", req.url, "meth
 // 1. 요청 URL
 // 2. 요청 메서드
 
-// 요청 URL이 /이고 요청 메서드가 GET일 때를 특정하는 조건식
+// if 조건식: 요청 URL이 /이고 요청 메서드가 GET일 때
 if(req.url === '/' && req.method === 'GET'){
   fs.readFile('./static/index.html', 'utf8', (err, data) => {
     if (err){
       serverErrorLog(); //
     }
     res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+  // else if 조건식: 요청 URL이 css이고 요청 메서드가 GET일 때
+} else if (req.url === 'css/style.css' & req.method === 'GET'){
+  fs.readFile('./static/css/style.css', 'utf8', (err, data) => {
+    if (err) {
+      serverErrorLog();
+    }
+    res.writeHead(200, {'Content-Type': 'text/css'});
     res.end(data);
   });
 }
