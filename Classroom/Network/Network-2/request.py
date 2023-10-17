@@ -10,3 +10,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.end_headers()
     self.wfile.write(b'Hello, World!')
+
+if __name__ == '__main__':
+  httpd = HTTPServer(('localhost', 3000), SimpleHTTPRequestHandler)
+  print("server running : http://localhost:3000/")
+  httpd.serve_forever()
