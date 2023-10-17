@@ -9,6 +9,18 @@ http.createServer((req, res) =>{
 }
 );
 console.log("어떤 요청이 들어오는지 확인", "url -> ", req.url, "method -> ", req.method);
+
 // 라우팅 처리 제작할 때, 두 가지 요청 데이터를 확인해야 한다.
 // 1. 요청 URL
 // 2. 요청 메서드
+
+// 요청 URL이 /이고 요청 메서드가 GET일 때를 특정하는 조건식
+if(req.url === '/' && req.method === 'GET'){
+  fs.readFile('./static/index.html', 'utf8', (err, data) => {
+    if (err){
+      serverErrorLog();
+    }
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+}
