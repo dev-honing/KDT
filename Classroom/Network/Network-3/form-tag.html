@@ -9,10 +9,14 @@
   <h1>Login Form</h1>
 
   <!-- 양식이라는 이름의 form 태그는 전형적인 컨테이너 태그 중 하나 -->
+  <!-- 어떤 행동을 할지, 어떤 방법을 사용할지에 대한 것만 래핑한 사례임. -->
   <form action="/login" method="GET">
     Username: <br>
     <input type="text" name="username" placeholder="user name"><br>
     Password: <br>
     <input type="password" name="password"  placeholder="password"><br><br>
+    
+    <!-- 제출(submit)을 진행했을 때 '요청(request)' 이벤트가 발생함. -->
+    <input type="submit"  value="Login">
 </body>
 </html>
