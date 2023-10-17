@@ -44,4 +44,7 @@ if(req.url === '/' && req.method === 'GET'){
     res.writeHead(200, {'Content-Type': 'application/javascript'});
     res.end(data);
   })
+} else {
+  res.writeHead(404);
+  res.end('Not Found');
 }
