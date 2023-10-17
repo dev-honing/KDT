@@ -36,4 +36,12 @@ if(req.url === '/' && req.method === 'GET'){
     res.writeHead(200, {'Content-Type': 'text/css'});
     res.end(data);
   });
+} else if (req.url === '/js/index.js' && req.method === 'GET') {
+  fs.readFile('./static/js/index.js', 'utf8', (err, data) => {
+    if (err) {
+      serverErrorLog();
+    }
+    res.writeHead(200, {'Content-Type': 'application/javascript'});
+    res.end(data);
+  })
 }
