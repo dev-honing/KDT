@@ -18,7 +18,7 @@ const server = http.createServer((req, res) =>{
   
   // if 조건식: 요청 URL이 /이고 요청 메서드가 GET일 때
   if(req.url === '/' && req.method === 'GET'){
-    fs.readFile('./static/index.html', 'utf8', (err, data) => {
+    fs.readFile('/index.html', 'utf8', (err, data) => {
       if (err){
         serverErrorLog(); //
       }
@@ -27,15 +27,15 @@ const server = http.createServer((req, res) =>{
     });
     // else if 조건식: 요청 URL이 css이고 요청 메서드가 GET일 때
   } else if (req.url === 'css/style.css' & req.method === 'GET'){
-    fs.readFile('./static/css/style.css', 'utf8', (err, data) => {
+    fs.readFile('/style.css', 'utf8', (err, data) => {
       if (err) {
         serverErrorLog();
       }
       res.writeHead(200, {'Content-Type': 'text/css'});
       res.end(data);
     });
-} else if (req.url === '/js/index.js' && req.method === 'GET') {
-  fs.readFile('./static/js/index.js', 'utf8', (err, data) => {
+} else if (req.url === '/js/app.js' && req.method === 'GET') {
+  fs.readFile('/app.js', 'utf8', (err, data) => {
     if (err) {
       serverErrorLog();
     }
