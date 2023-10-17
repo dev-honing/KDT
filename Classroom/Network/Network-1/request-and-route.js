@@ -7,8 +7,8 @@ const server = http.createServer((req, res) =>{
   
   // 가독성을 위한 함수 래핑
   function serverErrorLog(){
-    res.writeHead(500);
-    return res.end('500! Internal Server Error, 서버에 예상치 못한 문제가 생겼습니다.');
+    res.writeHead(500, {'Content-Type' : 'text/html; charset=utf-8'}); // 한글화를 위한 charset 추가
+    return res.end(`500! Internal Server Error, 서버에 예상치 못한 문제가 생겼습니다.`);
   }
   
   console.log("어떤 요청이 들어오는지 확인", "url -> ", req.url, "method -> ", req.method);
@@ -20,7 +20,7 @@ const server = http.createServer((req, res) =>{
   if(req.url === '/' && req.method === 'GET'){
     fs.readFile('/index.html', 'utf8', (err, data) => {
       if (err){
-        serverErrorLog(); //
+        serverErrorLog();
       }
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.end(data);
