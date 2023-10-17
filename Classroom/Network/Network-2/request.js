@@ -11,3 +11,4 @@ const server = http.createServer((req, res)=>{
 server.listen(3000, () =>{
   console.log(`server running : http://localhost:3000/`);
 })
+// 요청 URL은 '/'이고 요청 유형은 'GET'임을 확인!
