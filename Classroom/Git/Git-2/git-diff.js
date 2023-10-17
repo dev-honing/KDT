@@ -16,3 +16,5 @@ server.listen(3000, () =>{
 
 // ! git diff는 Working Directory와 Staging Area 사이의 차이를 확인하기 위한 명령어이므로 커밋을 한 뒤, `git diff`를 쓰면 아무것도 확인되지 않았다.
 // * 추가 사항은 초록색으로, 삭제된 사항은 빨간색으로 표기되는 것을 확인
+
+// ! VS Code의 Extension인 'Git Graph' 프로그램을 사용하면 더 쉽게 GUI로 확인할 수 있었다.
