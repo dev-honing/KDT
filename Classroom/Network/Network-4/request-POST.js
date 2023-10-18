@@ -52,8 +52,14 @@ http.createServer((req, res) => {
   }
   else if (req.method === "POST" && req.url === "/signup"){
     console.log("회원가입 요청");
-    fs.readFile("./signup")
-    res.end("회원가입을 진행합니다.")
+    fs.readFile("./signup.html", "utf-8", (err, data) => {
+      if (err) {
+        console.error("회원가입 도중 문제가 발생했습니다.")
+      }
+      console.log("회원가입 승인")
+      res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+      res.end(data);
+    })
     
   }
 }).listen(3000, () =>{
