@@ -49,7 +49,7 @@ http.createServer((req, res) => {
         
         const writeHeadType = {'Content-Type' : 'text/html; charset=utf-8'}
         res.writeHead(200, writeHeadType);
-        res.end("로그인 성공!");
+        res.end("로그인에 성공했습니다.");
       })
       
     }
