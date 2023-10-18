@@ -61,7 +61,7 @@ http.createServer((req, res) => {
       res.end(data);
     })
   }
-  else if (req.method === "POST" && req.url === "/doneSignUp"){
+  else if (req.method === "GET" && req.url === "/doneSignUp"){
     console.log("회원가입을 완료했습니다.")
   }
 
