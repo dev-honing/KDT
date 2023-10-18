@@ -8,15 +8,17 @@
 <body>
   <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
     <div>
-      ID<label for="ID"></label>
+      <label for="ID">이메일:</label>
+      <div type="hidden"></div>
       <input type="email" id="ID" name="User ID">
     </div>
     <div>
-      PW<label for="PW"></label>
+      <label for="PW">비밀번호:</label>
+      <div type="hidden"></div>
       <input type="password" id="PW" name="Password">
     </div>
     <div>
-      <button type="submit">Submit</button>
+      <button type="login">로그인</button>
     </div>
   </form>
 </body>

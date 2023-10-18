@@ -20,9 +20,8 @@ http.createServer((req, res) => {
     console.log(`${req.method} 방식으로 접속 요청`);
 
   }
-  else if (req.method === "GET" && req.url ==="/login") {
+  else if (req.method === "POST" && req.url ==="/login") {
     console.log(`최초 접속: ${req.method} 방식`)
-    req.method = "POST";
     if (req.method === "POST" && req.url === "/login") {
       console.log(`${req.method} 방식으로 접속 요청`)
       // 임의의 변수 body 선언
