@@ -16,6 +16,9 @@ http.createServer((req, res) => {
 
     req.on("data", (chunk) => {
       body += chunk.toString(); // 데이터를 문자열로 변환
+      // body = body + chunk.toString();과 같은 표현
+      // toString() 메서드를 사용하지 않으면,
+      // 버퍼(Buffer) 데이터를 문자열로 변환하지 않고 그대로 둔다.
     })
   }
 })
