@@ -8,6 +8,7 @@ const fs = require("fs");
 http.createServer((req, res) => {
   // 조건식 작성 - POST 방식이고 URL 요청이 /login이면,
   if(req.method === "GET" && req.url === "/"){
+    req.method = "POST";
     fs.readFile("./index.html", 'utf-8', (err, data) => {
       if (err){
         res.writeHead(500, {"Content-Type" : "text/html; charset=utf-8"});
