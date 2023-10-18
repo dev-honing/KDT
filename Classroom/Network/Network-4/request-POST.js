@@ -60,8 +60,11 @@ http.createServer((req, res) => {
       res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
       res.end(data);
     })
-    
   }
+  else if (req.method === "POST" && req.url === "/doneSignUp"){
+    console.log("보안문자 제출")
+  }
+
 }).listen(3000, () =>{
   const PORT = 3000;
   console.log(`CLI 창에서 편리하게 링크 확인: http://localhost:${PORT}/`)
