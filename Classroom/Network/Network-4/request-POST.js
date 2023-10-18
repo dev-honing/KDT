@@ -20,5 +20,10 @@ http.createServer((req, res) => {
       // toString() 메서드를 사용하지 않으면,
       // 버퍼(Buffer) 데이터를 문자열로 변환하지 않고 그대로 둔다.
     })
+
+    req.on("end", () => {
+      const parsedBody = querystring.parse(body); // 요청 본문을 파싱
+      const { username, password } = parsedBody; // ? 이 부분이 잘 이해가 가지 않음
+    })
   }
 })
