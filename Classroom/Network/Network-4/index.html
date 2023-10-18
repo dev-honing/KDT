@@ -6,11 +6,14 @@
   <title>INDEX</title>
 </head>
 <body>
-  <form action="/process" method="POST" enctype="text/plain">
-    <input type="hidden" name="hush" val="hidden, but not secret!">
+  <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
     <div>
-      <label for="fieldColor">Your favorite color:</label>
-      <input type="text" id="fieldColor" name="color">
+      ID<label for="ID"></label>
+      <input type="email" id="ID" name="User ID">
+    </div>
+    <div>
+      PW<label for="PW"></label>
+      <input type="password" id="PW" name="Password">
     </div>
     <div>
       <button type="submit">Submit</button>
