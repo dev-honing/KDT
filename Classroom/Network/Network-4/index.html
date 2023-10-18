@@ -4,18 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INDEX</title>
+  <style>
+    #message-CapsLock {
+      font-weight: bolder;
+      color: #ff003e;
+      display: inline-block;
+      background-color: lightgray;
+    }
+  </style>
 </head>
 <body>
-  <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
-    <div>
-      <label for="ID">이메일:</label>
-      <div type="hidden"></div>
-      <input type="email" id="ID" name="User ID" placeholder="이메일 주소를 입력하세요.">
-    </div>
+  <div id="root">
+
+    <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+      <div>
+        <label for="ID">이메일:</label>
+        <div type="hidden"></div>
+        <input type="email" id="ID" name="User ID" placeholder="이메일 주소를 입력하세요.">
+      </div>
     <div>
       <label for="PW">비밀번호:</label>
       <div type="hidden"></div>
-      <input type="password" id="PW" name="Password" placeholder="비밀번호를 입력하세요.">
+      <input type="password" id="PW" name="Password" placeholder="비밀번호를 입력하세요." onkeyup="capsLockChecking(event)">
+      <div id="message-CapsLock"></div>
     </div>
     <div>
       <button type="login">로그인</button>
@@ -25,5 +36,23 @@
     <label for="SIGN-UP"></label>
     <button id="SIGN-UP">회원가입</button>
   </form>
+  </div>
+  <script>
+    // 1. Caps Lock 안내 - onkeyup 속성에 핸들러 함수 추가
+    const root = document.getElementById("root");
+    const ID = document.getElementById("ID");
+    const PW = document.getElementById("PW");
+
+    function capsLockChecking(event){
+      if(event.getModifierState("CapsLock")){
+        document.getElementById("message-CapsLock").innerText = "Caps Lock이 켜져 있습니다.";
+      }
+      else {
+        document.getElementById("message-CapsLock").innerText = "";
+      }
+    }
+    // 2. 글자 수 제한(4자 이상)
+    // 3. 0000, aaaa 등 동일한 입력 금지
+  </script>
 </body>
 </html>
