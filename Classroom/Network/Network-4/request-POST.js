@@ -2,11 +2,22 @@
 const http = require("http");
 // querystring 모듈 import
 const querystring = require("querystring");
+// fs 모듈 import
+const fs = require("fs");
 
 http.createServer((req, res) => {
   // 조건식 작성 - POST 방식이고 URL 요청이 /login이면,
   if(req.method === "GET" && req.url === "/"){
+    fs.readFile("./index.html", 'utf-8', (err, data) => {
+      if (err){
+        res.writeHead(500, {"Content-Type" : "text/html; charset=utf-8"});
+        return res.end("500! Internal Server Error, 서버에 예상치 못한 문제가 발생했습니다.");
+      }
+      res.writeHead(200, {"Content-Type" : "text/html"});
+      res.end(data);
+    })
     console.log(`${req.method} 방식으로 접속 요청`);
+
   }
   else if (req.method === "POST" && req.url === "/login") {
     console.log()
