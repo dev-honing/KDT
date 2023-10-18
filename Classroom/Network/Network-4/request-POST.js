@@ -14,5 +14,7 @@ http.createServer((req, res) => {
     // 따라서 조건문(if문) 안에서만 사용할 수 있다.
     // if문을 기준으로 body 변수는 지역변수이다.
 
+    req.on("data", (chunk) => {
+    })
   }
 })
