@@ -5,18 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
   <link rel="stylesheet" href="common.css">
+  <style>
+    #root div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #container{
+      width: 100vw;
+      height: 95vh;
+      flex-direction: column;
+      background-color: whitesmoke;
+    }
+    p {
+      font-size: larger;
+      font-weight: bolder;
+    }
+    #container > #div-input {
+      display: flex;
+      justify-content: start;
+      width: 100vw;
+      height: 5vh;
+      border: 1px dotted #000;
+    }
+    #footer{
+      width: 100vw;
+      height:5vh;
+      display: flex;
+      background-color: grey;
+    }
+    img{
+      width: 20vw;
+      height: 20vh;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- 약관 동의 -->
-  <form action=""></form>
-
-  <!-- 필요한 인적사항 -->
-  <!-- 성명 -->
-  <!-- 이메일 주소 -->
-  <!-- 비밀번호 -->
-  <!-- 생년월일 -->
-  <!-- 주소 -->
-  <!-- 보안문자 -->
+<div id="root">
+  <div id="container">
+    <h1>가입절차</h2>
+      <br><br>
+    <div id="div-input">
+      <p>성명</p>
+      <input type="text" placeholder="성명을 입력하세요">
+    </div>
+      <br><br>
+    <div id="div-input">
+      <p>이메일</p>
+      <input type="email" placeholder="이메일을 입력하세요" >
+    </div>
+      <br><br>
+    <div id="div-input">
+      <p>비밀번호</p>
+      <input type="password" placeholder="비밀번호를 입력하세요">
+    </div>
+      <br><br>
+    <div id="div-input">
+      <p>생년월일</p>
+      <input type="date">
+    </div>
+    <br><br>
+    <div id="div-input">
+      <p>주소</p>
+      <button>우편번호</button>
+      <input type="text" placeholder="상세 주소를 입력하세요">
+    </div>
+    <br><br>
+    <div id="div-input">
+      <p>보안문자</p>
+      <input type="text" placeholder="보안문자를 입력하세요">
+      <img src="KDT IaaS.png" alt="Safety-Text">
+    </div>
+  </div>
+  <div id="footer">
+  </div>
+</div>
+</div>
 </body>
 </html>
