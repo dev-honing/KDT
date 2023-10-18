@@ -15,6 +15,7 @@ http.createServer((req, res) => {
     // if문을 기준으로 body 변수는 지역변수이다.
 
     req.on("data", (chunk) => {
+      body += chunk.toString(); // 데이터를 문자열로 변환
     })
   }
 })
