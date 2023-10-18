@@ -63,6 +63,25 @@ http.createServer((req, res) => {
   }
   else if (req.method === "GET" && req.url === "/doneSignUp"){
     console.log("회원가입을 완료했습니다.")
+    console.log("초기 화면으로 이동합니다.")
+    fs.readFile("./index.html", 'utf-8', (err, data) => {
+      if (err){
+        res.writeHead(500, {"Content-Type" : "text/html; charset=utf-8"});
+        return res.end("500! Internal Server Error, 서버에 예상치 못한 문제가 발생했습니다.");
+      }
+      res.writeHead(200, {"Content-Type" : "text/html"});
+      res.end(data);
+    })
+    
+  }
+  else if (req.method === "GET" && req.url === "/common.css"){
+    fs.readFile("./common.css", "utf-8", (err, data) => {
+      if (err) {
+        console.error("CSS 파일 로드에 실패했습니다.")
+      }
+      res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+      res.end(data);
+    })
   }
 
 }).listen(3000, () =>{
