@@ -62,7 +62,7 @@ http.createServer((req, res) => {
     })
   }
   else if (req.method === "POST" && req.url === "/doneSignUp"){
-    console.log("보안문자 제출")
+    console.log("회원가입을 완료했습니다.")
   }
 
 }).listen(3000, () =>{
