@@ -5,7 +5,11 @@ const querystring = require("querystring");
 
 http.createServer((req, res) => {
   // 조건식 작성 - POST 방식이고 URL 요청이 /login이면,
-  if (req.method === "POST" && req.url === "/login") {
+  if(req.method === "GET" && req.url === "/"){
+    console.log(`${req.method} 방식으로 접속 요청`);
+  }
+  else if (req.method === "POST" && req.url === "/login") {
+    console.log()
     // 임의의 변수 body 선언
     let body ="";
     // 몸통이라는 임의의 변수에 담는다. "POST" 요청은 본문이 존재하기 때문에
@@ -23,37 +27,19 @@ http.createServer((req, res) => {
 
     req.on("end", () => {
       const parsedBody = querystring.parse(body); // 요청 본문을 파싱
-      const { username, password } = parsedBody; // ? 이 부분이 잘 이해가 가지 않음
+      const { username, password } = parsedBody; 
+      
+      console.log(`form 입력으로부터 받은 데이터 확인: `, parsedBody);
+      console.log(`form 입력으로부터 받은 데이터 확인: `, username);
+      console.log(`form 입력으로부터 받은 데이터 확인: `, password);
+      
+      const writeHeadType = {'Content=Type' : 'text/plain'}
+      res.writeHead(200, writeHeadType);
+      res.end("login Success!");
     })
+    
   }
-})
-
-// 이해가지 않는 부분 정리하고 merge
-const object = {a: 1, b: 2};
-console.log(object); // { a: 1, b: 2 }
-
-// 디버거 확인
-// a: undefined, b: undefined
-// object: {a: 1, b: 2}
-
-const {a, b} = object;
-console.log({a,b}); // { a: 1, b: 2 } 
-
-// 디버거 확인
-// a: 1, b: 2
-// object: {a: 1, b: 2}
-// ! a와 b의 value가 생겼음
-
-// * 결론? (잘 모르겠음)
-// 변수를 선언한다: 메모리 공간을 확보한다.
-// 변수는 메모리 공간의 주소를 나타내는 상징적인 의미가 됨.
-
-// ? 일반적인 방식으로 변수를 선언하면?
-// 객체 프로퍼티의 메모리 공간도 확보하지만, 
-// key에 대응하는 값이 무엇인지만 입력해놓고, 
-// value에 대응하는 값은 가져오지 않는다.
-// (undefined로 공간만 확보하고 값을 입력해놓지는 않음) 
-
-// ? 비구조화 할당 방식으로 변수를 선언하면?(단축작성법)
-// 바로 접근해서 메모리 공간을 확보하고,
-// 프로퍼티의 value에 대응하는 값을 바로 입력함
+}).listen(3000, () =>{
+  const PORT = 3000;
+  console.log(`CLI 창에서 편리하게 링크 확인: http://localhost:${PORT}/`)
+});
