@@ -8,7 +8,7 @@ const fs = require("fs");
 http.createServer((req, res) => {
   // 조건식 작성 - POST 방식이고 URL 요청이 /login이면,
   if(req.method === "GET" && req.url === "/"){
-    console.log(`최초 접속: ${req.method} 방식`)
+    console.log(`최초 접속 요청 메서드: ${req.method}`)
     fs.readFile("./index.html", 'utf-8', (err, data) => {
       if (err){
         res.writeHead(500, {"Content-Type" : "text/html; charset=utf-8"});
@@ -17,7 +17,7 @@ http.createServer((req, res) => {
       res.writeHead(200, {"Content-Type" : "text/html"});
       res.end(data);
     })
-    console.log(`${req.method} 방식으로 접속 요청`);
+    console.log(`요청 메서드: ${req.method}`);
 
   }
   else if (req.method === "POST" && req.url ==="/login") {
