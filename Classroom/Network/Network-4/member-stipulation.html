@@ -7,17 +7,50 @@
   <link rel="stylesheet" href="common.css">
   <style>
     #container {
+      width: 100vw;
+      height: 95vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: whitesmoke;
+      border: px solid #000;
+    }
+    #container input {
+      display: inline-block;
+    }
+    #stipulation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightblue;
+      border: 3px dotted #000;
+      width: 70vw;
+      height: 15vh;
+    }
+    #footer{
+      width: 100vw;
+      height: 5vh;
+      background-color: grey;
     }
   </style>
 </head>
 <body>
   <div id="root">
     <div id="container">
-      <input type="checkbox" id="checkbox-1">      
-      <input type="checkbox" id="checkbox-2">      
-      <input type="checkbox" id="checkbox-3">      
+      <h1>약관 내용</h1><br><br><br><br>
+      <form action="">
+      <div id="stipulation">약관 1</div>
+      <input type="checkbox" id="checkbox-1">본 약관을 확인하였습니다.<br><br><br><br><br>
+      <div id="stipulation">약관 2</div>
+      <input type="checkbox" id="checkbox-2">본 약관을 확인하였습니다.<br><br><br><br><br>
+      <div id="stipulation">약관 3</div>
+      <input type="checkbox" id="checkbox-3">본 약관을 확인하였습니다.<br><br><br><br><br>
+    </form>
+    <form action="" type="button"></form>
+    </div>
+    <div id="footer">
     </div>
   </div>
 </body>
