@@ -36,7 +36,7 @@ const server = http.createServer((req, res) =>{
       res.writeHead(200, {'Content-Type': 'text/css'});
       res.end(data);
     });
-} else if (req.url === '/app.js' && req.method === 'GET') {
+  } else if (req.url === '/app.js' && req.method === 'GET') {
   fs.readFile('./app.js', 'utf-8', (err, data) => {
     if (err) {
       serverErrorLog();
@@ -44,7 +44,7 @@ const server = http.createServer((req, res) =>{
     res.writeHead(200, {'Content-Type': 'application/javascript'});
     res.end(data);
   })
-} else {
+  } else {
   res.writeHead(404);
   res.end('Not Found');
 }
