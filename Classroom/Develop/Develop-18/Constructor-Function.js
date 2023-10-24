@@ -16,3 +16,11 @@ const makeObjectOne = (idValue, passwordValue, emailValue) => {
 let result = makeObjectOne("아이디 테스트", "패스워드 테스트", "이메일 테스트");
 console.log(result);
 };
+
+function makeObjectTwo(idValue, passwordValue, emailValue){
+  // 함수를 '선언문' 방식, 기명함수 방식으로 바꾸었고 this 바인딩을 활용해 제작했다.
+  this.id = idValue;
+  this.password = passwordValue;
+  this.email = emailValue;
+}
+
