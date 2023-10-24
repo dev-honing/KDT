@@ -15,7 +15,8 @@
     xhr.open("GET", _URL);
     xhr.send();
     xhr.addEventListener("load", () => {
-      
+      const _pokemonData = JSON.parse(xhr.response);
+      console.log("처음 보는 응답이 무엇인지 조회해보기 :", _pokemonData);
     })
   </script>
 </body>
