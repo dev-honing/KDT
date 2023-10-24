@@ -12,7 +12,11 @@
     const xhr = new XMLHttpRequest();
     const _URL = "https://pokeapi.co/api/v2/pokemon/ditto";
 
-    
+    xhr.open("GET", _URL);
+    xhr.send();
+    xhr.addEventListener("load", () => {
+      
+    })
   </script>
 </body>
 </html>
