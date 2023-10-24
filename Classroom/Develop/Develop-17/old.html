@@ -11,7 +11,11 @@
     // 'loadModule' 버튼을 클릭하면 동작함
     const loadModule = document.getElementById("load-module");
     loadModule.addEventListener("click", () => {
-      
+      const script = document.createElement("script");      
+      // DOM API 메서드인 createElement() 메서드로 script 태그를 만들지 말라는 법은 없다.
+      script.src = 'another-module.js'
+      //script 태그의 src 속성에 특정 경로의 JavaScript 파일을 '동적'으로 추가하지 말라는 법은 없다.
+      // 이렇게 하면, script 태그가 문서에 추가되는 순간, 해당 경로의 JavaScript 파일이 다운로드되고 실행된다.
     })
   </script>
 </body>
