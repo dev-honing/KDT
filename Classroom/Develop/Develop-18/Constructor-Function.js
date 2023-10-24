@@ -11,4 +11,8 @@ const makeObjectOne = (idValue, passwordValue, emailValue) => {
     password : passwordValue,
     email : emailValue
   }
+
+// 함수 makeObjectOne()은 객체를 리턴했기 때문에, result 변수는 사실상 객체를 담은 변수이다.
+let result = makeObjectOne("아이디 테스트", "패스워드 테스트", "이메일 테스트");
+console.log(result);
 };
