@@ -24,3 +24,9 @@ function makeObjectTwo(idValue, passwordValue, emailValue){
   this.email = emailValue;
 }
 
+// 함수를 호출할 때 new라는 키워드를 추가했다.
+let result = new makeObjectTwo("아이디 테스트", "패스워드 테스트", "이메일 테스트")
+
+// 결과적으로 변수 result는 객체이지만, '함수로부터 만들어진 무언가', '인스턴스(instance)'라고 명명한다.
+// 같은 객체이기 때문에 예제 1번과 결과물이 같아 보이지만, '인스턴스'인가 아닌가의 유무에서 완전히 다른 차이가 있다.
+console.log(result);
