@@ -17,6 +17,11 @@
     xhr.addEventListener("load", () => {
       const _pokemonData = JSON.parse(xhr.response);
       console.log("처음 보는 응답이 무엇인지 조회해보기 :", _pokemonData);
+      const h1 = document.createElement("h1");
+      h1.textContent = _pokemonData.name;
+      root.appendChild(h1);
+      
+      // 포켓몬 데이터 중 이름에 관한 텍스트 내용을 h1 태그의 내용으로 넣고 root 영역에 자식요소로 추가하는 건가?
     })
   </script>
 </body>
